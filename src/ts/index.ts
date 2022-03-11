@@ -261,7 +261,9 @@ function onResize() {
 
 function onWheel(event: WheelEvent) {
     if (0 < event.deltaY) {//down
-        camera.position.y -= 0.1
+        if(-8.5 < camera.position.y ) {
+            camera.position.y -= 0.1
+        }
     } else {//up
         if (camera.position.y < 0) {
             camera.position.y += 0.1
